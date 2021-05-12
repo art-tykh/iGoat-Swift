@@ -1,0 +1,13 @@
+name:                     dependencies
+
+on:
+  schedule:
+  - cron:                 "0 0 * * *"
+
+jobs:
+  dependencies:
+    runs-on:              macos-latest
+
+    steps:
+    - uses:               actions/checkout@master
+    - uses:               sbertix/spm-dependencies-checker@master
